@@ -27,7 +27,7 @@ export async function fsWriteFile(fullpath: string, content: string): Promise<vo
   })
 }
 
-export function fsReadFile(fullpath: string, encoding = 'utf8'): Promise<string> {
+export function fsReadFile(fullpath: string, encoding: BufferEncoding = 'utf8'): Promise<string> {
   return new Promise((resolve, reject) => {
     fs.readFile(fullpath, encoding, (err, content) => {
       if (err) reject(err)
