@@ -17,8 +17,7 @@
     "watch": "webpack --watch",
     "build:types": "node scripts/gen_package_type.js",
     "build:webpack": "webpack --mode production",
-    "build:doc": "ts-node ./scripts/gendoc.ts",
-    "build": "run-s build:types build:webpack build:doc",
+    "build": "run-s build:types build:webpack",
     "prepare": "run-s clean build",
     "lint": "eslint . --ext .ts"
   },
